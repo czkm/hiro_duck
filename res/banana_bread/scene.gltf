@@ -1,0 +1,255 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 7675,
+      "max": [
+        0.8625829815864563,
+        1.2636879682540894,
+        0.7047010064125061
+      ],
+      "min": [
+        -0.87169897556304932,
+        -0.53605902194976807,
+        -0.17131200432777405
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 92100,
+      "componentType": 5126,
+      "count": 7675,
+      "max": [
+        0.99992638826370239,
+        0.99637126922607422,
+        0.99916958808898926
+      ],
+      "min": [
+        -0.99999958276748657,
+        -0.99926561117172241,
+        -0.99997228384017944
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 7675,
+      "max": [
+        0.98648780584335327,
+        0.99916046857833862,
+        0.99935483932495117,
+        1
+      ],
+      "min": [
+        -0.99820911884307861,
+        -0.99408304691314697,
+        -0.99984258413314819,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7675,
+      "max": [
+        0.95507901906967163,
+        0.99995601177215576
+      ],
+      "min": [
+        8.4999999671708792e-05,
+        2.8000000384054147e-05
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 41196,
+      "max": [
+        7674
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "alban (https://sketchfab.com/alban)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/banana-bread-3a6cda16adee41ebbe3cbb8c6cdbf464",
+      "title": "Banana bread"
+    },
+    "generator": "Sketchfab-6.84.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 164784,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 61400,
+      "byteOffset": 164784,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 184200,
+      "byteOffset": 226184,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 122800,
+      "byteOffset": 410384,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 533184,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "images": [
+    {
+      "uri": "textures/model_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_unlit": {}
+      },
+      "name": "model",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.98379248380661011,
+        -0.013312540017068386,
+        0.17881587147712708,
+        0,
+        0.0037067909725010395,
+        0.99853700399398804,
+        0.053945716470479965,
+        0,
+        -0.17927242815494537,
+        -0.052408557385206223,
+        0.98240256309509277,
+        0,
+        0.046388570219278336,
+        0.014448676258325577,
+        -0.014118026942014694,
+        1
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "model.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": ""
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
+
