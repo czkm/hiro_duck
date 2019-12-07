@@ -17,6 +17,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <title>生日快乐🎂</title>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
@@ -26,10 +27,20 @@
 
 <body style='margin : 0px; overflow: hidden; debugUIEnabled: false;'>
 
+  <div id="videoWrap" style="display: none;">
+    <video autoplay="autoplay" id="videoBox"></video>
+  </div>
+  <!-- <script>
+    var videoWrap = document.getElementById('videoWrap');
+    videoWrap.style.width = window.innerWidth + 'px';
+    videoWrap.style.height = window.innerHeight + 'px';
+  </script> -->
+
+
   <!-- <body style='margin : 0px; overflow: hidden;'> -->
   <a-scene embedded arjs='sourceType: webcam;'>
     <a-marker preset='hiro'>
-      <a-entity position='5 2 -3' text="width: 15; value:Happy birthday, 廖欣LiaoXin"></a-entity>
+      <a-entity position='5 1 1' text="width: 15; value:Happy birthday, 廖欣LiaoXin"></a-entity>
       <a-entity position="0 0 0" gltf-model="src: url(https://czkm.github.io/birthday_cake/res/duck/scene.gltf)">
       </a-entity>
     </a-marker>
@@ -38,7 +49,35 @@
 
 </html>
 <script>
-  console.log(1)
+  function getMedia() {
+    if (navigator.getUserMedia) {
+      console.log(1)
+
+      navigator.getUserMedia({
+        'video': {
+          'optional': [{}]
+        }
+      }, successFunc, errorFunc);
+    } else {
+      alert('Native device media streaming (getUserMedia) not supported in this browser.');
+    }
+  }
+  var localStream;
+
+  function successFunc(stream) {
+    document.getElementById('video').src = window.URL && window.URL.createObjectURL(stream) || stream;
+    localStream = stream;
+  }
+
+  function errorFunc(e) {
+    alert('Error！' + e);
+  }
+
+  function closeMedia() {
+    localStream.stop();
+    document.getElementById('video').src = '';
+  }
+
   setTimeout(() => {
     // console.log(document.getElementById("arjsDebugUIContainer"))
     document.getElementById("arjsDebugUIContainer").className = "hide_style";
